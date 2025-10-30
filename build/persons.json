@@ -1,0 +1,69 @@
+[
+    {
+        "classes": [
+            "Advanced Optimization Methods",
+            "Introduction to Optical Biosensors",
+            "Computational Chemistry and Materials Modeling"
+        ],
+        "name": "Olive",
+        "schedule": [
+            {
+                "class": "Advanced Optimization Methods",
+                "days": [
+                    "Thursday",
+                    "Friday"
+                ],
+                "rooms": [
+                    "B2-3006",
+                    "B2-3006"
+                ],
+                "teachers": [
+                    "Alexander Tyurin\nAnh Huy Phan",
+                    "Alexander Tyurin\nAnh Huy Phan"
+                ],
+                "times": [
+                    "09:00-12:00",
+                    "09:00-12:00"
+                ]
+            },
+            {
+                "class": "Introduction to Optical Biosensors",
+                "days": [
+                    "Wednesday",
+                    "Friday"
+                ],
+                "rooms": [
+                    "R2-2011",
+                    "R2-2011"
+                ],
+                "teachers": [
+                    "Alexey Yashchenok",
+                    "Alexey Yashchenok"
+                ],
+                "times": [
+                    "09:00-12:00",
+                    "09:00-12:00"
+                ]
+            },
+            {
+                "class": "Computational Chemistry and Materials Modeling",
+                "days": [
+                    "Wednesday",
+                    "Friday"
+                ],
+                "rooms": [
+                    "R2-2030",
+                    "R2-2030"
+                ],
+                "teachers": [
+                    "Aleksandr Kvashnin\nAlexander Shapeev\nDmitry Aksenov\nSergey Levchenko",
+                    "Aleksandr Kvashnin\nAlexander Shapeev\nDmitry Aksenov\nSergey Levchenko"
+                ],
+                "times": [
+                    "12:30-15:30",
+                    "12:30-15:30"
+                ]
+            }
+        ]
+    }
+]
