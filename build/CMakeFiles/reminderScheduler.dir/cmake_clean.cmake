@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/reminderScheduler.dir/src/ReminderScheduler.cpp.o"
   "CMakeFiles/reminderScheduler.dir/src/ReminderScheduler.cpp.o.d"
+  "CMakeFiles/reminderScheduler.dir/src/Users.cpp.o"
+  "CMakeFiles/reminderScheduler.dir/src/Users.cpp.o.d"
   "reminderScheduler"
   "reminderScheduler.pdb"
 )

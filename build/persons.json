@@ -10,8 +10,8 @@
             {
                 "class": "Advanced Optimization Methods",
                 "days": [
-                    "Thursday",
-                    "Friday"
+                    "Friday",
+                    "Thursday"
                 ],
                 "rooms": [
                     "B2-3006",
@@ -29,8 +29,8 @@
             {
                 "class": "Introduction to Optical Biosensors",
                 "days": [
-                    "Wednesday",
-                    "Friday"
+                    "Friday",
+                    "Wednesday"
                 ],
                 "rooms": [
                     "R2-2011",
@@ -48,8 +48,8 @@
             {
                 "class": "Computational Chemistry and Materials Modeling",
                 "days": [
-                    "Wednesday",
-                    "Friday"
+                    "Friday",
+                    "Wednesday"
                 ],
                 "rooms": [
                     "R2-2030",
@@ -65,5 +65,73 @@
                 ]
             }
         ]
+    },
+    {
+        "classes": [
+            "Advanced Optimization Methods",
+            "Introduction to Optical Biosensors",
+            "Computational Chemistry and Materials Modeling"
+        ],
+        "name": "Kate",
+        "schedule": [
+            {
+                "class": "Advanced Optimization Methods",
+                "days": [
+                    "Friday",
+                    "Thursday"
+                ],
+                "rooms": [
+                    "B2-3006",
+                    "B2-3006"
+                ],
+                "teachers": [
+                    "Alexander Tyurin\nAnh Huy Phan",
+                    "Alexander Tyurin\nAnh Huy Phan"
+                ],
+                "times": [
+                    "09:00-12:00",
+                    "09:00-12:00"
+                ]
+            },
+            {
+                "class": "Introduction to Optical Biosensors",
+                "days": [
+                    "Friday",
+                    "Wednesday"
+                ],
+                "rooms": [
+                    "R2-2011",
+                    "R2-2011"
+                ],
+                "teachers": [
+                    "Alexey Yashchenok",
+                    "Alexey Yashchenok"
+                ],
+                "times": [
+                    "09:00-12:00",
+                    "09:00-12:00"
+                ]
+            },
+            {
+                "class": "Computational Chemistry and Materials Modeling",
+                "days": [
+                    "Friday",
+                    "Wednesday"
+                ],
+                "rooms": [
+                    "R2-2030",
+                    "R2-2030"
+                ],
+                "teachers": [
+                    "Aleksandr Kvashnin\nAlexander Shapeev\nDmitry Aksenov\nSergey Levchenko",
+                    "Aleksandr Kvashnin\nAlexander Shapeev\nDmitry Aksenov\nSergey Levchenko"
+                ],
+                "times": [
+                    "12:30-15:30",
+                    "12:30-15:30"
+                ]
+            }
+        ],
+        "term": 2
     }
 ]

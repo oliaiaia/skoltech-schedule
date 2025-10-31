@@ -9,7 +9,7 @@ find_package(nlohmann_json REQUIRED)
 
 add_executable(reminderScheduler 
     src/ReminderScheduler.cpp 
-    include/ReminderScheduler.hpp
+    src/Users.cpp 
 )
 target_link_libraries(reminderScheduler CURL::libcurl nlohmann_json::nlohmann_json)
 target_include_directories(reminderScheduler PRIVATE include)

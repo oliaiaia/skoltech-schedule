@@ -153,6 +153,30 @@ src/ReminderScheduler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/src/ReminderScheduler.cpp.s
 .PHONY : src/ReminderScheduler.cpp.s
 
+src/Users.o: src/Users.cpp.o
+.PHONY : src/Users.o
+
+# target to build an object file
+src/Users.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/src/Users.cpp.o
+.PHONY : src/Users.cpp.o
+
+src/Users.i: src/Users.cpp.i
+.PHONY : src/Users.i
+
+# target to preprocess a source file
+src/Users.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/src/Users.cpp.i
+.PHONY : src/Users.cpp.i
+
+src/Users.s: src/Users.cpp.s
+.PHONY : src/Users.s
+
+# target to generate assembly for a file
+src/Users.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/src/Users.cpp.s
+.PHONY : src/Users.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... src/ReminderScheduler.o"
 	@echo "... src/ReminderScheduler.i"
 	@echo "... src/ReminderScheduler.s"
+	@echo "... src/Users.o"
+	@echo "... src/Users.i"
+	@echo "... src/Users.s"
 .PHONY : help
 
 

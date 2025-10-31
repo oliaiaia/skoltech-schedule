@@ -4,5 +4,11 @@
   "command": "/usr/bin/c++  -I/home/olia/CLionProjects/reminderSchedule/include -g -std=gnu++20 -o CMakeFiles/reminderScheduler.dir/src/ReminderScheduler.cpp.o -c /home/olia/CLionProjects/reminderSchedule/src/ReminderScheduler.cpp",
   "file": "/home/olia/CLionProjects/reminderSchedule/src/ReminderScheduler.cpp",
   "output": "CMakeFiles/reminderScheduler.dir/src/ReminderScheduler.cpp.o"
+},
+{
+  "directory": "/home/olia/CLionProjects/reminderSchedule/build",
+  "command": "/usr/bin/c++  -I/home/olia/CLionProjects/reminderSchedule/include -g -std=gnu++20 -o CMakeFiles/reminderScheduler.dir/src/Users.cpp.o -c /home/olia/CLionProjects/reminderSchedule/src/Users.cpp",
+  "file": "/home/olia/CLionProjects/reminderSchedule/src/Users.cpp",
+  "output": "CMakeFiles/reminderScheduler.dir/src/Users.cpp.o"
 }
 ]

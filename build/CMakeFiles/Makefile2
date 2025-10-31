@@ -81,12 +81,12 @@ clean: CMakeFiles/reminderScheduler.dir/clean
 CMakeFiles/reminderScheduler.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olia/CLionProjects/reminderSchedule/build/CMakeFiles --progress-num=1,2 "Built target reminderScheduler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olia/CLionProjects/reminderSchedule/build/CMakeFiles --progress-num=1,2,3 "Built target reminderScheduler"
 .PHONY : CMakeFiles/reminderScheduler.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/reminderScheduler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/reminderScheduler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles 0
 .PHONY : CMakeFiles/reminderScheduler.dir/rule

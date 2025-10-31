@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/reminderScheduler.dir/src/ReminderScheduler.cpp.o -o reminderScheduler  /usr/lib/x86_64-linux-gnu/libcurl.so 
+/usr/bin/c++ -g CMakeFiles/reminderScheduler.dir/src/ReminderScheduler.cpp.o CMakeFiles/reminderScheduler.dir/src/Users.cpp.o -o reminderScheduler  /usr/lib/x86_64-linux-gnu/libcurl.so 
