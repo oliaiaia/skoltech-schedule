@@ -42,7 +42,7 @@ void Users::addCourse(const std::string &userName, const std::vector<std::string
     {
 
         UserSchedule userSch;
-        nlohmann::json currentUserCourses = *jsonLinkByName;
+        nlohmann::json &currentUserCourses = *jsonLinkByName;
         convertJsonToUser(userSch, currentUserCourses);
 
         std::unordered_map<int, std::string> week;
@@ -69,7 +69,6 @@ void Users::addCourse(const std::string &userName, const std::vector<std::string
         }
 
         convertUserToJson(userSch, currentUserCourses);
-        *jsonLinkByName = currentUserCourses;
         fileManager.saveJsonToFile(personsJson, filename);
     }
 }
@@ -84,7 +83,7 @@ void Users::removeCourseData(const std::string &userName, const std::vector<std:
 
     if (it != personsJson.end())
     {
-        nlohmann::json currentUserCourses = *it;
+        nlohmann::json &currentUserCourses = *it;
         
         std::unordered_set<std::string> classesToRemove(userClasses.begin(), userClasses.end());
         
@@ -105,8 +104,6 @@ void Users::removeCourseData(const std::string &userName, const std::vector<std:
             }
         }
         currentUserCourses["schedule"] = newSchedule;
-        
-        *it = currentUserCourses;
         fileManager.saveJsonToFile(personsJson, filename);
     }
 }
@@ -207,6 +204,8 @@ void Users::convertJsonToUser( UserSchedule &userSch, const nlohmann::json &user
     userSch.term = userJson["term"];
     userSch.classes = userJson["classes"];
 
+    userSch.schedule.clear();
+    
     for (auto &courseJson : userJson["schedule"])
     {
         ScheduleItem coursesInfo;
@@ -321,6 +320,7 @@ void Users::findNecessaryCourseFromDay(const std::unordered_map<int, std::string
 
 void Users::fillClassesForUser(const std::vector<std::string> &userClasses, int termNum, std::vector<ScheduleItem> &fullUserSchedule)
 {
+    //убрано копирование
 
     for (const auto &cource : userClasses)
     {
@@ -336,7 +336,8 @@ void Users::fillClassesForUser(const std::vector<std::string> &userClasses, int 
 
     for (auto &item : fullUserSchedule)
     {
-        threads.emplace_back([week, &item, this]()
+        // week как ссылка, чтобы не копировать всю мапу в каждый поток. потоки должны джойниться до выхода из функции
+        threads.emplace_back([&week, &item, this]()
                              { findNecessaryCourseFromDay(week, item); });
     }
 

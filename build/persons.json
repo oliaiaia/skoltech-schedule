@@ -1,134 +1,75 @@
 [
     {
         "classes": [
-            "Advanced Optimization Methods",
-            "Introduction to Optical Biosensors",
-            "Computational Chemistry and Materials Modeling"
+            "Planning Algorithms in Artificial Intelligence",
+            "Leader in Startup",
+            "Systems Engineering",
+            "CDE Seminars"
         ],
-        "name": "Olive",
+        "name": "Olia",
         "schedule": [
             {
-                "class": "Advanced Optimization Methods",
+                "class": "Planning Algorithms in Artificial Intelligence",
                 "days": [
-                    "Friday",
+                    "Friday"
+                ],
+                "rooms": [
+                    "B2-3007"
+                ],
+                "teachers": [
+                    "Gonzalo Ferrer"
+                ],
+                "times": [
+                    "16:00-19:00"
+                ]
+            },
+            {
+                "class": "Leader in Startup",
+                "days": [
                     "Thursday"
                 ],
                 "rooms": [
-                    "B2-3006",
-                    "B2-3006"
+                    "B4-3006"
                 ],
                 "teachers": [
-                    "Alexander Tyurin\nAnh Huy Phan",
-                    "Alexander Tyurin\nAnh Huy Phan"
+                    "Maxim Kiselev"
                 ],
                 "times": [
-                    "09:00-12:00",
                     "09:00-12:00"
                 ]
             },
             {
-                "class": "Introduction to Optical Biosensors",
+                "class": "Systems Engineering",
                 "days": [
                     "Friday",
                     "Wednesday"
                 ],
                 "rooms": [
-                    "R2-2011",
-                    "R2-2011"
+                    "B2-3005",
+                    "B2-3005"
                 ],
                 "teachers": [
-                    "Alexey Yashchenok",
-                    "Alexey Yashchenok"
-                ],
-                "times": [
-                    "09:00-12:00",
-                    "09:00-12:00"
-                ]
-            },
-            {
-                "class": "Computational Chemistry and Materials Modeling",
-                "days": [
-                    "Friday",
-                    "Wednesday"
-                ],
-                "rooms": [
-                    "R2-2030",
-                    "R2-2030"
-                ],
-                "teachers": [
-                    "Aleksandr Kvashnin\nAlexander Shapeev\nDmitry Aksenov\nSergey Levchenko",
-                    "Aleksandr Kvashnin\nAlexander Shapeev\nDmitry Aksenov\nSergey Levchenko"
+                    "Clement Fortin\nMikhail Belov\nSabah Farshad",
+                    "Clement Fortin\nMikhail Belov\nSabah Farshad"
                 ],
                 "times": [
                     "12:30-15:30",
                     "12:30-15:30"
                 ]
-            }
-        ]
-    },
-    {
-        "classes": [
-            "Advanced Optimization Methods",
-            "Introduction to Optical Biosensors",
-            "Computational Chemistry and Materials Modeling"
-        ],
-        "name": "Kate",
-        "schedule": [
+            },
             {
-                "class": "Advanced Optimization Methods",
+                "class": "CDE Seminars",
                 "days": [
-                    "Friday",
-                    "Thursday"
+                    "Wednesday"
                 ],
                 "rooms": [
-                    "B2-3006",
                     "B2-3006"
                 ],
                 "teachers": [
-                    "Alexander Tyurin\nAnh Huy Phan",
-                    "Alexander Tyurin\nAnh Huy Phan"
+                    "Alexander Korsunsky\nAlexey Salimon\nAndrey Somov\nClement Fortin\nDzmitry Tsetserukou\nHenni Ouerdane\nPavel Osinenko\nTatiana Podladchikova"
                 ],
                 "times": [
-                    "09:00-12:00",
-                    "09:00-12:00"
-                ]
-            },
-            {
-                "class": "Introduction to Optical Biosensors",
-                "days": [
-                    "Friday",
-                    "Wednesday"
-                ],
-                "rooms": [
-                    "R2-2011",
-                    "R2-2011"
-                ],
-                "teachers": [
-                    "Alexey Yashchenok",
-                    "Alexey Yashchenok"
-                ],
-                "times": [
-                    "09:00-12:00",
-                    "09:00-12:00"
-                ]
-            },
-            {
-                "class": "Computational Chemistry and Materials Modeling",
-                "days": [
-                    "Friday",
-                    "Wednesday"
-                ],
-                "rooms": [
-                    "R2-2030",
-                    "R2-2030"
-                ],
-                "teachers": [
-                    "Aleksandr Kvashnin\nAlexander Shapeev\nDmitry Aksenov\nSergey Levchenko",
-                    "Aleksandr Kvashnin\nAlexander Shapeev\nDmitry Aksenov\nSergey Levchenko"
-                ],
-                "times": [
-                    "12:30-15:30",
-                    "12:30-15:30"
+                    "16:00-18:00"
                 ]
             }
         ],

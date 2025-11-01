@@ -18,13 +18,13 @@ int main() {
 
 
 
-    std::vector <std::string> userClasses = {"Advanced Optimization Methods", "Introduction to Optical Biosensors", "Computational Chemistry and Materials Modeling"};
+    std::vector <std::string> userClasses = {"Planning Algorithms in Artificial Intelligence", "Leader in Startup", "Systems Engineering", "CDE Seminars"};
 
     Users user;
     // user.changeFromScratchUserData("Kate", userClasses, 2);
 
-    userClasses = {"Computational Chemistry and Materials Modeling"};
-    user.addCourse("Kate", userClasses);
+    user.changeFromScratchUserData("Olia", userClasses, 2);
+    user.addCourse("Olia", {"Bioinformatics"});
     
 
     return 0;
