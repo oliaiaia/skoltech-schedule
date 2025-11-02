@@ -4,7 +4,8 @@
             "Planning Algorithms in Artificial Intelligence",
             "Leader in Startup",
             "Systems Engineering",
-            "CDE Seminars"
+            "CDE Seminars",
+            "Bioinformatics"
         ],
         "name": "Olia",
         "schedule": [
@@ -70,6 +71,21 @@
                 ],
                 "times": [
                     "16:00-18:00"
+                ]
+            },
+            {
+                "class": "Bioinformatics",
+                "days": [
+                    "Thursday"
+                ],
+                "rooms": [
+                    "B4-3005"
+                ],
+                "teachers": [
+                    "Mikhail Gelfand"
+                ],
+                "times": [
+                    "12:30-15:30"
                 ]
             }
         ],

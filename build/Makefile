@@ -129,6 +129,19 @@ reminderScheduler/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/build
 .PHONY : reminderScheduler/fast
 
+#=============================================================================
+# Target rules for targets named users
+
+# Build rule for target.
+users: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 users
+.PHONY : users
+
+# fast build rule for target.
+users/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/build
+.PHONY : users/fast
+
 src/ReminderScheduler.o: src/ReminderScheduler.cpp.o
 .PHONY : src/ReminderScheduler.o
 
@@ -159,6 +172,7 @@ src/Users.o: src/Users.cpp.o
 # target to build an object file
 src/Users.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/src/Users.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/src/Users.cpp.o
 .PHONY : src/Users.cpp.o
 
 src/Users.i: src/Users.cpp.i
@@ -167,6 +181,7 @@ src/Users.i: src/Users.cpp.i
 # target to preprocess a source file
 src/Users.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/src/Users.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/src/Users.cpp.i
 .PHONY : src/Users.cpp.i
 
 src/Users.s: src/Users.cpp.s
@@ -175,7 +190,35 @@ src/Users.s: src/Users.cpp.s
 # target to generate assembly for a file
 src/Users.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/src/Users.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/src/Users.cpp.s
 .PHONY : src/Users.cpp.s
+
+src/users_c_api.o: src/users_c_api.cpp.o
+.PHONY : src/users_c_api.o
+
+# target to build an object file
+src/users_c_api.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/src/users_c_api.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/src/users_c_api.cpp.o
+.PHONY : src/users_c_api.cpp.o
+
+src/users_c_api.i: src/users_c_api.cpp.i
+.PHONY : src/users_c_api.i
+
+# target to preprocess a source file
+src/users_c_api.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/src/users_c_api.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/src/users_c_api.cpp.i
+.PHONY : src/users_c_api.cpp.i
+
+src/users_c_api.s: src/users_c_api.cpp.s
+.PHONY : src/users_c_api.s
+
+# target to generate assembly for a file
+src/users_c_api.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/src/users_c_api.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/src/users_c_api.cpp.s
+.PHONY : src/users_c_api.cpp.s
 
 # Help Target
 help:
@@ -186,12 +229,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... reminderScheduler"
+	@echo "... users"
 	@echo "... src/ReminderScheduler.o"
 	@echo "... src/ReminderScheduler.i"
 	@echo "... src/ReminderScheduler.s"
 	@echo "... src/Users.o"
 	@echo "... src/Users.i"
 	@echo "... src/Users.s"
+	@echo "... src/users_c_api.o"
+	@echo "... src/users_c_api.i"
+	@echo "... src/users_c_api.s"
 .PHONY : help
 
 

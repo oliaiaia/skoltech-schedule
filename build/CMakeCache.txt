@@ -247,6 +247,9 @@ reminderScheduler_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 reminderScheduler_SOURCE_DIR:STATIC=/home/olia/CLionProjects/reminderSchedule
 
+//Dependencies for the target
+users_LIB_DEPENDS:STATIC=general;CURL::libcurl;
+
 
 ########################
 # INTERNAL cache entries

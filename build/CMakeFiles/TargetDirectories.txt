@@ -1,3 +1,4 @@
 /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles/reminderScheduler.dir
+/home/olia/CLionProjects/reminderSchedule/build/CMakeFiles/users.dir
 /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles/edit_cache.dir
 /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles/rebuild_cache.dir

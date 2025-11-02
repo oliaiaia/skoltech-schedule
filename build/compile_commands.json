@@ -10,5 +10,23 @@
   "command": "/usr/bin/c++  -I/home/olia/CLionProjects/reminderSchedule/include -g -std=gnu++20 -o CMakeFiles/reminderScheduler.dir/src/Users.cpp.o -c /home/olia/CLionProjects/reminderSchedule/src/Users.cpp",
   "file": "/home/olia/CLionProjects/reminderSchedule/src/Users.cpp",
   "output": "CMakeFiles/reminderScheduler.dir/src/Users.cpp.o"
+},
+{
+  "directory": "/home/olia/CLionProjects/reminderSchedule/build",
+  "command": "/usr/bin/c++  -I/home/olia/CLionProjects/reminderSchedule/include -g -std=gnu++20 -o CMakeFiles/reminderScheduler.dir/src/users_c_api.cpp.o -c /home/olia/CLionProjects/reminderSchedule/src/users_c_api.cpp",
+  "file": "/home/olia/CLionProjects/reminderSchedule/src/users_c_api.cpp",
+  "output": "CMakeFiles/reminderScheduler.dir/src/users_c_api.cpp.o"
+},
+{
+  "directory": "/home/olia/CLionProjects/reminderSchedule/build",
+  "command": "/usr/bin/c++ -Dusers_EXPORTS -I/home/olia/CLionProjects/reminderSchedule/include -g -std=gnu++20 -fPIC -o CMakeFiles/users.dir/src/Users.cpp.o -c /home/olia/CLionProjects/reminderSchedule/src/Users.cpp",
+  "file": "/home/olia/CLionProjects/reminderSchedule/src/Users.cpp",
+  "output": "CMakeFiles/users.dir/src/Users.cpp.o"
+},
+{
+  "directory": "/home/olia/CLionProjects/reminderSchedule/build",
+  "command": "/usr/bin/c++ -Dusers_EXPORTS -I/home/olia/CLionProjects/reminderSchedule/include -g -std=gnu++20 -fPIC -o CMakeFiles/users.dir/src/users_c_api.cpp.o -c /home/olia/CLionProjects/reminderSchedule/src/users_c_api.cpp",
+  "file": "/home/olia/CLionProjects/reminderSchedule/src/users_c_api.cpp",
+  "output": "CMakeFiles/users.dir/src/users_c_api.cpp.o"
 }
 ]

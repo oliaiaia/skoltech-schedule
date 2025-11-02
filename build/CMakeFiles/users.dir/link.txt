@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libusers.so -o libusers.so CMakeFiles/users.dir/src/Users.cpp.o CMakeFiles/users.dir/src/users_c_api.cpp.o  /usr/lib/x86_64-linux-gnu/libcurl.so 

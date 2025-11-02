@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/olia/CLionProjects/reminderSchedule/build
 
 # The main recursive "all" target.
 all: CMakeFiles/reminderScheduler.dir/all
+all: CMakeFiles/users.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/reminderScheduler.dir/clean
+clean: CMakeFiles/users.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -81,12 +83,12 @@ clean: CMakeFiles/reminderScheduler.dir/clean
 CMakeFiles/reminderScheduler.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olia/CLionProjects/reminderSchedule/build/CMakeFiles --progress-num=1,2,3 "Built target reminderScheduler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olia/CLionProjects/reminderSchedule/build/CMakeFiles --progress-num=1,2,3,4 "Built target reminderScheduler"
 .PHONY : CMakeFiles/reminderScheduler.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/reminderScheduler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/reminderScheduler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles 0
 .PHONY : CMakeFiles/reminderScheduler.dir/rule
@@ -99,6 +101,32 @@ reminderScheduler: CMakeFiles/reminderScheduler.dir/rule
 CMakeFiles/reminderScheduler.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reminderScheduler.dir/build.make CMakeFiles/reminderScheduler.dir/clean
 .PHONY : CMakeFiles/reminderScheduler.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/users.dir
+
+# All Build rule for target.
+CMakeFiles/users.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olia/CLionProjects/reminderSchedule/build/CMakeFiles --progress-num=5,6,7 "Built target users"
+.PHONY : CMakeFiles/users.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/users.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/users.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/CLionProjects/reminderSchedule/build/CMakeFiles 0
+.PHONY : CMakeFiles/users.dir/rule
+
+# Convenience name for target.
+users: CMakeFiles/users.dir/rule
+.PHONY : users
+
+# clean rule for target.
+CMakeFiles/users.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/clean
+.PHONY : CMakeFiles/users.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

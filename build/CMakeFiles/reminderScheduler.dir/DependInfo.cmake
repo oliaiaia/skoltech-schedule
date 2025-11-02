@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/olia/CLionProjects/reminderSchedule/src/ReminderScheduler.cpp" "CMakeFiles/reminderScheduler.dir/src/ReminderScheduler.cpp.o" "gcc" "CMakeFiles/reminderScheduler.dir/src/ReminderScheduler.cpp.o.d"
   "/home/olia/CLionProjects/reminderSchedule/src/Users.cpp" "CMakeFiles/reminderScheduler.dir/src/Users.cpp.o" "gcc" "CMakeFiles/reminderScheduler.dir/src/Users.cpp.o.d"
+  "/home/olia/CLionProjects/reminderSchedule/src/users_c_api.cpp" "CMakeFiles/reminderScheduler.dir/src/users_c_api.cpp.o" "gcc" "CMakeFiles/reminderScheduler.dir/src/users_c_api.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
