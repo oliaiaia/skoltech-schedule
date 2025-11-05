@@ -65,11 +65,15 @@ private:
 
     std::string getWeekdayByCode(int weekday);
 
+    int getCodeByWeekday(std::string weekday);
+
     int getNumWeekday(int year, int month, int day);
 
     void convertUserToJson(const UserSchedule &userSch, nlohmann::json &newUserJson);
     
     void convertJsonToUser( UserSchedule &userSch, const nlohmann::json &newUserJson);
+
+    void sortByDay(ScheduleItem &scheduleItem);
 
     void getWeekDataFromApi(int termNum, std::unordered_map<int, std::string> &week);
 

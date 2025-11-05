@@ -4,56 +4,67 @@
             "Planning Algorithms in Artificial Intelligence",
             "Leader in Startup",
             "Systems Engineering",
-            "CDE Seminars",
-            "Bioinformatics"
+            "CDE Seminars"
         ],
         "name": "Olia",
         "schedule": [
             {
                 "class": "Planning Algorithms in Artificial Intelligence",
                 "days": [
+                    "Monday",
                     "Friday"
                 ],
                 "rooms": [
+                    "B2-3007",
                     "B2-3007"
                 ],
                 "teachers": [
+                    "Gonzalo Ferrer",
                     "Gonzalo Ferrer"
                 ],
                 "times": [
+                    "16:00-19:00",
                     "16:00-19:00"
                 ]
             },
             {
                 "class": "Leader in Startup",
                 "days": [
+                    "Tuesday",
                     "Thursday"
                 ],
                 "rooms": [
+                    "B4-3006",
                     "B4-3006"
                 ],
                 "teachers": [
+                    "Maxim Kiselev",
                     "Maxim Kiselev"
                 ],
                 "times": [
+                    "09:00-12:00",
                     "09:00-12:00"
                 ]
             },
             {
                 "class": "Systems Engineering",
                 "days": [
-                    "Friday",
-                    "Wednesday"
+                    "Monday",
+                    "Wednesday",
+                    "Friday"
                 ],
                 "rooms": [
+                    "B2-3005",
                     "B2-3005",
                     "B2-3005"
                 ],
                 "teachers": [
                     "Clement Fortin\nMikhail Belov\nSabah Farshad",
+                    "Clement Fortin\nMikhail Belov\nSabah Farshad",
                     "Clement Fortin\nMikhail Belov\nSabah Farshad"
                 ],
                 "times": [
+                    "12:30-15:30",
                     "12:30-15:30",
                     "12:30-15:30"
                 ]
@@ -71,21 +82,6 @@
                 ],
                 "times": [
                     "16:00-18:00"
-                ]
-            },
-            {
-                "class": "Bioinformatics",
-                "days": [
-                    "Thursday"
-                ],
-                "rooms": [
-                    "B4-3005"
-                ],
-                "teachers": [
-                    "Mikhail Gelfand"
-                ],
-                "times": [
-                    "12:30-15:30"
                 ]
             }
         ],

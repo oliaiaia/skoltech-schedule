@@ -21,11 +21,30 @@ int main() {
     std::vector <std::string> userClasses = {"Planning Algorithms in Artificial Intelligence", "Leader in Startup", "Systems Engineering", "CDE Seminars"};
 
     Users user;
-    // user.changeFromScratchUserData("Kate", userClasses, 2);
-
     user.changeFromScratchUserData("Olia", userClasses, 2);
-    user.addCourse("Olia", {"Bioinformatics"});
     
+    // int a = 5;
+    // std::cout << "a: " << a << std::endl;
+    // std::cout << "&a: " << &a << std::endl;
+    // auto p = &a;
+    // std::cout << "*p: " << *p << std::endl;
+    // std::cout << std::endl;
+
+    // *p = *p + 10;
+    // std::cout << "p: " << p << std::endl;
+    // std::cout << "*p: " << *p << std::endl;
+    // std::cout << "a: " << a << std::endl;
+    // std::cout << "&a: " << &a << std::endl;
+    // std::cout << std::endl;
+
+    
+    // // другая ячейка памяти
+    // p = p + 10;
+    // std::cout << "p: " << p << std::endl;
+    // std::cout << "*p: " << *p << std::endl;
+    // std::cout << "a: " << a << std::endl;
+    // std::cout << "&a: " << &a << std::endl;
+    // std::cout << std::endl;
 
     return 0;
 }

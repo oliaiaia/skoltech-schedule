@@ -167,6 +167,18 @@ std::string Users::getWeekdayByCode(int weekday)
     }
 }
 
+
+int Users::getCodeByWeekday(std::string weekday)
+{
+    if(weekday.find("Sunday") != std::string::npos) return 0;
+    if(weekday.find("Monday") != std::string::npos) return 1;
+    if(weekday.find("Tuesday") != std::string::npos) return 2;
+    if(weekday.find("Wednesday") != std::string::npos) return 3;
+    if(weekday.find("Thursday") != std::string::npos) return 4;
+    if(weekday.find("Friday") != std::string::npos) return 5;
+    if(weekday.find("Saturday") != std::string::npos) return 6;
+}
+
 int Users::getNumWeekday(int year, int month, int day)
 {
     std::tm timeinfo = {};
@@ -220,6 +232,7 @@ void Users::convertJsonToUser( UserSchedule &userSch, const nlohmann::json &user
 
 void Users::getWeekDataFromApi(int termNum, std::unordered_map<int, std::string> &week)
 {
+
     std::string termStart, termID;
     std::string allTerms = apiprocessor.getTermsList();
 
@@ -233,6 +246,7 @@ void Users::getWeekDataFromApi(int termNum, std::unordered_map<int, std::string>
             if (termID.find("term" + std::to_string(termNum)) != std::string::npos)
             {
                 termStart = term.value("start_date", "");
+                std::cout << "term start time " << termStart << std::endl;
                 break; // to get the last study year for the term
             }
         }
@@ -249,7 +263,7 @@ void Users::getWeekDataFromApi(int termNum, std::unordered_map<int, std::string>
         return;
     }
 
-    if ((day + 7) > 30)
+    if ((day + 2*7) > 30)
     {
         day = 1;
 
@@ -268,28 +282,64 @@ void Users::getWeekDataFromApi(int termNum, std::unordered_map<int, std::string>
 
     for (int t = 0; t < weekDaysAmount; t++)
     {
-        if (day + t < 10)
-        {
-            termStart = std::to_string(year) + "-" + std::to_string(month) + "-0" + std::to_string(day + t);
-        }
-        else
-            termStart = std::to_string(year) + "-" + std::to_string(month) + "-" + std::to_string(day + t);
+        if (day + t < 10) termStart = std::to_string(year) + "-" + std::to_string(month) + "-0" + std::to_string(day + t);
+        else termStart = std::to_string(year) + "-" + std::to_string(month) + "-" + std::to_string(day + t);
 
-        week.insert({getNumWeekday(year, month, day + t), apiprocessor.getDayList(termID, termStart)});
+        std::string theDay = apiprocessor.getDayList(termID, termStart);
+        //if the day is weekend \ holiday
+        if(theDay.size() < 10) {
+
+            int theDayInTheNextWeek = day + 7;
+
+            if (theDayInTheNextWeek + t < 10) termStart = std::to_string(year) + "-" + std::to_string(month) + "-0" + std::to_string(theDayInTheNextWeek + t);
+            else termStart = std::to_string(year) + "-" + std::to_string(month) + "-" + std::to_string(theDayInTheNextWeek + t);
+
+            theDay = apiprocessor.getDayList(termID, termStart);
+        }
+
+        week.insert({getNumWeekday(year, month, day + t), theDay});
     }
+
 }
+
+  void Users::sortByDay(ScheduleItem &scheduleItem) {
+        // Создаем вектор индексов
+        std::vector<size_t> indices(scheduleItem.days.size());
+        for (size_t i = 0; i < scheduleItem.days.size(); ++i) {
+            indices[i] = i;
+        }
+        
+        // Сортируем индексы по дням
+        std::sort(indices.begin(), indices.end(),
+            [this, scheduleItem](size_t i, size_t j) {
+                return getCodeByWeekday(scheduleItem.days[i]) < getCodeByWeekday(scheduleItem.days[j]);
+            });
+        
+        // Создаем временные векторы с отсортированными данными
+        auto sorted_days = scheduleItem.days;
+        auto sorted_rooms = scheduleItem.rooms;
+        auto sorted_teachers = scheduleItem.teachers;
+        auto sorted_times = scheduleItem.times;
+        
+        for (size_t i = 0; i < indices.size(); ++i) {
+            scheduleItem.days[i] = sorted_days[indices[i]];
+            scheduleItem.rooms[i] = sorted_rooms[indices[i]];
+            scheduleItem.teachers[i] = sorted_teachers[indices[i]];
+            scheduleItem.times[i] = sorted_times[indices[i]];
+        }
+    }
 
 void Users::findNecessaryCourseFromDay(const std::unordered_map<int, std::string> &allDays, ScheduleItem &scheduleItem)
 {
 
-    for (const auto &[dayNum, oneDay] : allDays)
+    for (const auto &[dayNum, oneDaySchedule] : allDays)
     {
         try
         {
-            auto jsonDay = nlohmann::json::parse(oneDay);
+            auto jsonDaySchedule = nlohmann::json::parse(oneDaySchedule);
 
             // перебор по всем предметам этого дня
-            for (auto &disciplineStudied : jsonDay)
+            for (auto &disciplineStudied : jsonDaySchedule)
             {
 
                 std::string courceName = disciplineStudied.value("course_name", "N/A");
@@ -298,6 +348,7 @@ void Users::findNecessaryCourseFromDay(const std::unordered_map<int, std::string
                 // курс из списка курсов терма и дисциплина студента соотвествуют друг другу
                 if (scheduleItem.class_name.find(courceName) != std::string::npos)
                 {
+                    
                     scheduleItem.days.push_back(getWeekdayByCode(dayNum));
                     scheduleItem.rooms.push_back(disciplineStudied.value("room_id", "N/A"));
                     scheduleItem.teachers.push_back(disciplineStudied.value("instructors", "N/A"));
@@ -316,6 +367,8 @@ void Users::findNecessaryCourseFromDay(const std::unordered_map<int, std::string
             return;
         }
     }
+
+    sortByDay(scheduleItem);
 }
 
 void Users::fillClassesForUser(const std::vector<std::string> &userClasses, int termNum, std::vector<ScheduleItem> &fullUserSchedule)
